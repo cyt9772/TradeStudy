@@ -10,14 +10,15 @@ class MyWindow(QWidget):
     def setupUI(self):
         self.setGeometry(800,200,300,300)
 
-        self.textEdit=QTextEdit(self)
-        self.textEdit.resize(280,250)
-        self.textEdit.move(10,10)
+        self.pushButton1=QPushButton("Button1")
+        self.pushButton2 = QPushButton("Button2")
+        self.pushButton3 = QPushButton("Button3")
 
-        self.pushButton=QPushButton('저장',self)
-        self.pushButton.resize(280, 25)
-        self.pushButton.move(10,270)
-
+        layout=QHBoxLayout()
+        layout.addWidget(self.pushButton1)
+        layout.addWidget(self.pushButton2)
+        layout.addWidget(self.pushButton3)
+        self.setLayout(layout)
 
 if __name__=="__main__":
     app=QApplication(sys.argv)
