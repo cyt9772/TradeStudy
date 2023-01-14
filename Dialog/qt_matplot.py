@@ -9,6 +9,7 @@ from pandas import Series, DataFrame
 import datetime
 
 
+
 class MyWindow(QWidget):
     def __init__(self):
         super().__init__()
