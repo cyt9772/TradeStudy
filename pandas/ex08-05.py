@@ -24,3 +24,21 @@ broadcast_axis : {0 : index / 1 : columns} 어느 축을 기준으로 브로드�
 브로드캐스트란 서로 차원이 다른 두 객체에 대해서 저차원 데이터의 차원을 고차원 데이터에 맞추는 과정입니다.
 자세한것은 [추후 brodcast항목 추가 예정] 에서 확인 가능합니다.
 """
+n=np.NaN
+col1 = ['col1','col2','col3']
+row1 = ['row1','row2','row3']
+data1 = [[1,2,3],[5,6,7],[9,n,11]]
+
+col2 = ['col2','col3','col4']
+row2 = ['row3','row4','row5']
+data2 = [[10,11,12],[14,n,16],[18,19,20]]
+
+df1 = pd.DataFrame(data1,row1,col1)
+df2 = pd.DataFrame(data2,row2,col2)
+
+print(df1)
+print(df2)
+
+#레이블 기준으로 사용
+print(df1.align(df2, join='left')[0])
+# print(df1.align(df2, join='outer')[1])
