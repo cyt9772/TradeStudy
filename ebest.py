@@ -79,7 +79,7 @@ class EBest:
 
         run_mode = "EBEST_" + mode
         config = configparser.ConfigParser()
-        config.read('D:\\work\\python\\Xing\\config.ini')
+        config.read('config.ini')
         self.user = config[run_mode]['user']
         self.passwd = config[run_mode]['password']
         self.cert_passwd = config[run_mode]['cert_passwd']
