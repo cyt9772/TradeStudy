@@ -82,6 +82,18 @@ class TestEBest(unittest.TestCase):
         assert result
         print(result)
 
+    def test_get_price_n_min_by_code(self):
+        print(inspect.stack()[0][3])
+        result = self.ebest.get_price_n_min_by_code("20230217","180640")
+        assert result
+        print(result)
+
+    def test_get_price_n_min_by_code_tick(self):
+        print(inspect.stack()[0][3])
+        result = self.ebest.get_price_n_min_by_code("20230217","005930",0)
+        assert result
+        print(result)
+
 agent=TestEBest()
 agent.setUP()
 # agent.test_get_credit_trend_by_code()
@@ -90,6 +102,8 @@ agent.setUP()
 # agent.test_get_account_info()
 # agent.test_get_account_stock_info()
 # agent.test_order_stock()
-#agent.test_order_cancel()
-#agent.test_order_check()
-agent.test_get_current_call_price_by_code()
+# agent.test_order_cancel()
+# agent.test_order_check()
+# agent.test_get_current_call_price_by_code()
+agent.test_get_price_n_min_by_code()
+agent.test_get_price_n_min_by_code_tick()
